@@ -1,0 +1,30 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Test suite TDX">
+    
+    <listeners>
+        <listener class-name="org.TDX.utils.Listener"/>
+    </listeners>
+    
+    <parameter name="url" value="https://angular.realworld.io/"></parameter>
+    <parameter name="swaggerUrl" value="https://tdxapp.azurewebsites.net/swagger/index.html"></parameter>
+    <parameter name="browser" value="chrome"></parameter>
+
+
+    <parameter name="username" value="PruebaTDX999"></parameter>
+    <parameter name="password" value="Test12345"></parameter>
+
+    <test name="Sing Up Test" enabled="true" >
+        <classes>
+            <class name="org.TDX.tests.SingUpTest" />
+        </classes>
+    </test>
+
+    <test name="Swagger Ui Api Test" enabled="true" >
+        <classes>
+            <class name="org.TDX.tests.SwaggerUiApiTest" />
+        </classes>
+    </test>
+
+
+
+</suite>
